@@ -1,0 +1,221 @@
+<html>
+
+<head>
+    <title>who wins</title>
+    <style>
+        #head {
+            position: absolute;
+            margin-top: 300px;
+            color: red;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 20px;
+            width: 900px;
+        }
+        
+        #box1 {
+            cursor: pointer;
+            height: 100px;
+            width: 100px;
+            margin-top: 50px;
+            margin-left: 100px;
+            position: absolute;
+            background-color: red;
+        }
+        
+        #box1:hover {
+            height: 110px;
+            width: 110px;
+        }
+        
+        #box1 p {
+            margin-top: -30px;
+            margin-left: 10px;
+        }
+        
+        #box2 {
+            cursor: pointer;
+            height: 100px;
+            width: 100px;
+            margin-top: 50px;
+            margin-left: 300px;
+            position: absolute;
+            background-color: yellow;
+        }
+        
+        #box2:hover {
+            height: 110px;
+            width: 110px;
+        }
+        
+        .A {
+            position: absolute;
+            margin-left: 30px;
+            margin-top: -10px;
+            color: red;
+        }
+        
+        .A:hover {
+            color: cyan;
+        }
+        
+        .B {
+            position: absolute;
+            margin-left: 30px;
+            margin-top: -10px;
+            color: yellow;
+        }
+        
+        .B:hover {
+            color: red;
+        }
+        
+        .C {
+            position: absolute;
+            margin-left: 30px;
+            margin-top: -10px;
+            color: cyan;
+        }
+        
+        .c:hover {
+            color: yellow;
+        }
+        
+        #box2 p {
+            margin-top: -30px;
+            margin-left: 10px;
+        }
+        
+        #box3 {
+            cursor: pointer;
+            height: 100px;
+            width: 100px;
+            margin-top: 50px;
+            margin-left: 500px;
+            position: absolute;
+            background-color: cyan;
+        }
+        
+        #box3:hover {
+            height: 110px;
+            width: 110px;
+        }
+        
+        #box3 p {
+            margin-top: -30px;
+            margin-left: 10px;
+        }
+        
+        #click-count {
+            color: red;
+            font-weight: 600;
+        }
+        
+        p {
+            position: relative;
+            top: 150px;
+            font-size: 30px;
+        }
+        
+        span {
+            color: red;
+            font-weight: 600;
+        }
+        
+        #btn {
+            height: 40px;
+            width: 250px;
+            border-radius: 10px;
+            background-color: red;
+            color: yellow;
+            left: 650px;
+            top: 100px;
+            position: absolute;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        #btn:hover {
+            color: red;
+            background-color: yellow;
+        }
+        
+        .result-box {
+            margin-top: 0px;
+            height: 600px;
+            width: 400px;
+            background-color: rgb(0, 255, 200);
+            right: 20px;
+            position: absolute;
+            border-radius: 60px;
+            transition: 0.6s;
+            cursor: pointer;
+        }
+        
+        .result-box:hover {
+            height: 610px;
+            width: 410px;
+        }
+        
+        .result-box p {
+            top: -10px;
+            margin-left: 30px;
+        }
+        
+        .win-box {
+            height: 50px;
+            width: 150px;
+            background-color: yellow;
+            margin-left: 110px;
+            border-radius: 20px;
+        }
+        
+        #win {
+            position: absolute;
+            margin-top: 10px;
+            margin-left: 18px;
+        }
+        
+        #last-line {
+            margin-top: 400px;
+            margin-left: 60px;
+            position: absolute;
+            font-size: 40px;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="head">
+        <h1>CLICK ON THE BOXES and for result CLICK ON THE RESULT BUTTON ,it will show everything</h1>
+    </div>
+    <div id="box1">
+        <P>box A <span id="click-count1"></span> </P>
+        <h1 class="A">A</h1>
+    </div>
+    <div id="box2">
+        <P>box B <span id="click-count2"></span> </P>
+        <h1 class="B">B</h1>
+    </div>
+    <div id="box3">
+        <P>box C <span id="click-count3"></span> </P>
+        <h1 class="C">C</h1>
+    </div>
+    <button id="btn" onclick="res()">
+        see result:
+    </button>
+    <div class="result-box">
+        <h1 style="margin-left: 80px;">RESULT BOX</h1>
+        <p>box A got total vote = <span id="a"> 0 </span></p>
+        <p>box B got total vote = <span id="b"> 0 </span></p>
+        <p>box C got total vote = <span id="c"> 0 </span></p>
+        <h1 style="font-size: 60px; margin-left: 55px;">WINNER</h1>
+        <div class="win-box">
+            <h2 id="win">LETS SEE</h2>
+        </div>
+    </div>
+    <h1 id="last-line" onclick="showLastline">hhhhhhh</h1>
+    <script src="app.js"></script>
+</body>
+
+</html>
